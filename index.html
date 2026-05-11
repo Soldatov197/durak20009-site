@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Groove Room</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>THE GROOVE ROOM</h1>
+      <p>Durak20009</p>
+    </div>
+
+    <nav>
+      <a href="#home">Главная</a>
+      <a href="#catalog">Каталог</a>
+      <a href="#contacts">Контакты</a>
+      <button class="cart-button" id="cartButton">Корзина (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h2>Найди свой ритм</h2>
+    <p>Винил, кассеты и редкие музыкальные издания</p>
+    <a class="hero-btn" href="#catalog">Смотреть каталог</a>
+  </section>
+
+  <main class="main-content" id="catalog">
+    <aside class="sidebar">
+      <h3>Жанры</h3>
+      <div class="genres">
+        <button class="genre active" data-filter="all">Все</button>
+        <button class="genre" data-filter="rock">Рок</button>
+        <button class="genre" data-filter="jazz">Джаз</button>
+        <button class="genre" data-filter="funk">Фанк</button>
+        <button class="genre" data-filter="collectible">Коллекционные</button>
+      </div>
+    </aside>
+
+    <section class="products-section">
+      <div class="section-title">
+        <h2>Каталог</h2>
+        <p>Выбирай пластинки и добавляй их в корзину</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-category="rock">
+          <img src="https://avatars.mds.yandex.net/i?id=f762968bb5ddb9abf032b6129a3642eabd3bd035-4551895-images-thumbs&n=13" alt="The Beatles - Abbey Road">
+          <h3>The Beatles — Abbey Road</h3>
+          <p class="description">Классика британского рока.</p>
+          <p class="price">3990 ₽</p>
+          <button class="btn" data-name="The Beatles — Abbey Road" data-price="3990">В корзину</button>
+        </article>
+
+        <article class="product-card" data-category="jazz">
+          <img src="https://avatars.mds.yandex.net/i?id=0925296a1bc04c8b128d1a883f2f2b8d907d5cb1-2744668-images-thumbs&n=13" alt="Miles Davis - Kind of Blue">
+          <h3>Miles Davis — Kind of Blue</h3>
+          <p class="description">Легендарный джазовый альбом.</p>
+          <p class="price">4500 ₽</p>
+          <button class="btn" data-name="Miles Davis — Kind of Blue" data-price="4500">В корзину</button>
+        </article>
+
+        <article class="product-card" data-category="funk">
+          <img src="https://avatars.mds.yandex.net/i?id=a9768ce6e776562c60a16c4ad7861b749ac96770-5235721-images-thumbs&n=13" alt="James Brown - Live">
+          <h3>James Brown — Live</h3>
+          <p class="description">Фанк, энергия и живой звук.</p>
+          <p class="price">2990 ₽</p>
+          <button class="btn" data-name="James Brown — Live" data-price="2990">В корзину</button>
+        </article>
+
+        <article class="product-card" data-category="collectible rock">
+          <img src="https://avatars.mds.yandex.net/i?id=aeebd74190e456c01ae3fd13a0262903f6651f66-12728486-images-thumbs&n=13" alt="Queen - Bohemian Rhapsody">
+          <h3>Queen — Bohemian Rhapsody</h3>
+          <p class="description">Коллекционное издание Queen.</p>
+          <p class="price">6500 ₽</p>
+          <button class="btn" data-name="Queen — Bohemian Rhapsody" data-price="6500">В корзину</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <section class="about">
+    <h2>О магазине</h2>
+    <p>The Groove Room — магазин винила для любителей музыки. Здесь можно найти рок, джаз, фанк и редкие коллекционные издания.</p>
+  </section>
+
+  <section class="contacts" id="contacts">
+    <h2>Контакты</h2>
+    <p>Почта для связи:</p>
+    <a href="mailto:Durak20009@yandex.ru">Durak20009@yandex.ru</a>
+  </section>
+
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-window">
+      <button class="close" id="closeCart">×</button>
+      <h2>Корзина</h2>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-total">Итого: <span id="cartTotal">0</span> ₽</div>
+      <a class="order-btn" id="orderBtn" href="mailto:Durak20009@yandex.ru">Оформить заказ</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 THE GROOVE ROOM</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
